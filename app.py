@@ -57,14 +57,24 @@ def main():
     print("\nMagazines:")
     for magazine in magazines:
         print(Magazine(magazine["id"], magazine["name"], magazine["category"]))
+    article_content = input( " Enter article content: ") #added input content
+
 
     print("\nAuthors:")
     for author in authors:
         print(Author(author["id"], author["name"]))
 
+    # Create models
+    author = Author( name=author_name)
+    magazine = Magazine (name=magazine_name, category=magazine_category)
+    article = Article (author=author, magazine=magazine, title=article_title, content=article_content) #pass content models
+
+
     print("\nArticles:")
     for article in articles:
         print(Article(article["id"], article["title"], article["content"], article["author_id"], article["magazine_id"]))
+print(f"Author: {author.name}, Magazine: {magazine.name}, Article: {article.title}, Content: {article.content}")
+
 
 if __name__ == "__main__":
     main()
