@@ -73,7 +73,7 @@ def main():
     print("\nArticles:")
     for article in articles:
         print(Article(article["id"], article["title"], article["content"], article["author_id"], article["magazine_id"]))
-print(f"Author: {author.name}, Magazine: {magazine.name}, Article: {article.title}, Content: {article.content}")
+
 
 
 if __name__ == "__main__":
